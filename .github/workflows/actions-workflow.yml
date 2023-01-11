@@ -9,7 +9,7 @@ jobs:
     
     - name: build and tag image
       run: |
-        docker build -t tiarapuspa/uas-pccks:latest -f Dockerfile .
+        docker build -t tiarapuspa/uas-pccks-2022:latest -f Dockerfile.
     
     - name: push to dockerhub
-      run: docker login -u ${{secrets.tiarapuspa}} -p ${{secrets.tiarapuspaaziza}} && docker push tiarapuspa/uas-pccks:latest
+      run: docker login -u ${{secrets.tiarapuspa}} -p ${{secrets.tiarapuspa}} && docker push tiarapuspa/uas-pccks-2022:latest
