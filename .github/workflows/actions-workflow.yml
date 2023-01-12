@@ -12,4 +12,4 @@ jobs:
         docker build -t tiarapuspa/uas-pccks-2022:latest -f Dockerfile.
     
     - name: push to dockerhub
-      run: docker login -u ${{secrets.tiarapuspa}} -p ${{secrets.tiarapuspa}} && docker push tiarapuspa/uas-pccks-2022:latest
+      run: docker login -u ${{secrets.dockerhub_username}} -p ${{secrets.dockerhub_AccessToken}} && docker push tiarapuspa/uas-pccks-2022:latest
